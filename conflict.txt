@@ -1,1 +1,2 @@
 HELLOWE
+conflict string

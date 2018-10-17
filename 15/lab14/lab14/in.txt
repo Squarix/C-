@@ -1,0 +1,13 @@
+integer function fi(integer x, integer y)
+{
+ declare integer z = 2;
+ z= x*(x+y);
+ return z;
+};
+
+main
+{
+ declare integer x = 5;
+ x = 1;
+ return 0;
+};

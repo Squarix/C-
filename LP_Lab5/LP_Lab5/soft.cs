@@ -109,6 +109,8 @@ namespace LP_Lab5
 
         public bool FabricateElection(string country)
         {
+            if (country != "USA")
+                throw new ElectionVirus();
             Console.WriteLine($"Выборы в {country} успешно подтусованны");
             Console.WriteLine("");
             return true;

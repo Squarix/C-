@@ -10,24 +10,20 @@ namespace LP_Lab4
     {
         static void Main(string[] args)
         {
-            OdnomerniyMassive NewMassive = new OdnomerniyMassive();
-            int[] testArray = new int[5] { 1, 2, 3, 4, 5 };
-            NewMassive = NewMassive * testArray;
-            foreach (int value in NewMassive.massive)
+            try
             {
-                Console.Write($"элемент - {value}; ");
+                Database<DBSupport> db = new Database<DBSupport>();
+                Table table = new Table("users");
+                Schema schema = new Schema(115);
+                db.Add(table);
+                db.Add(schema);
+                db.Lookup();
+                Console.ReadLine();
             }
-            Console.WriteLine("===========");
-            string result = NewMassive ? "true" : "false";
-            Console.WriteLine(result);
-            Console.WriteLine("===========");
-            Console.WriteLine((int)NewMassive);
-            NewMassive._owner = new OdnomerniyMassive.Owner(1, "Vlad", "djEPAM");
-            NewMassive._date  = new OdnomerniyMassive.Date(5, 10);
-            Console.WriteLine("===========");
-            Console.WriteLine(NewMassive.NewMethod());
-            Console.ReadLine();
-            
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 

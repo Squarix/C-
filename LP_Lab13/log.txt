@@ -1,0 +1,5 @@
+E:\Csharpless\LP_Lab13
+E:\Csharpless\LP_Lab13  LENGTH:0  EXTENSION:.txt  FULLNAME:E:\Csharpless\LP_Lab13\log.txt NAME: log.txt
+07.12.2018 10:50:24
+File Amount
+6

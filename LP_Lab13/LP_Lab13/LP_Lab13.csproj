@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2029A594-B196-4AA3-8961-83C836220D48}</ProjectGuid>
+    <ProjectGuid>{C54233FF-FBFC-4BB1-9E8C-E11B7792D050}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LP_Lab5</RootNamespace>
-    <AssemblyName>LP_Lab5</AssemblyName>
+    <RootNamespace>LP_Lab13</RootNamespace>
+    <AssemblyName>LP_Lab13</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,8 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,10 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions.cs" />
+    <Compile Include="FileManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="soft.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

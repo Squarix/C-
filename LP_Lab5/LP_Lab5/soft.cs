@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace LP_Lab5
 {
@@ -27,12 +28,16 @@ namespace LP_Lab5
     {
         int partialField1;
     }
-
+    [XmlRoot("Soft")]
+    [Serializable]
     public abstract class Soft
     {
-        protected string name;
-        protected int bitness;
-        protected string platform;
+        [XmlElement]
+        public string name;
+        [XmlAttribute("platform")]
+        public int bitness;
+        [XmlIgnore]
+        public string platform;
         virtual public bool LoadProcess()
         {
             Console.WriteLine("Загружаем процесс в память");
@@ -57,8 +62,8 @@ namespace LP_Lab5
             }
         }
     }
-        
-    abstract class TextProccessor : Soft
+    [Serializable]    
+    public abstract class TextProccessor : Soft
     {
         public TextProccessor()
         {
@@ -73,8 +78,11 @@ namespace LP_Lab5
         }
     }
 
-    class Word : TextProccessor
+    [Serializable]
+
+    public class Word : TextProccessor
     {
+        
         public Word ()
         {
             this.name = "Word";
